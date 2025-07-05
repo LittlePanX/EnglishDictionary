@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC9A3DF-6749-4751-8308-E780FF8F55F7}|EnglishDictionary.vcxproj|F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FEC9A3DF-6749-4751-8308-E780FF8F55F7}|EnglishDictionary.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC9A3DF-6749-4751-8308-E780FF8F55F7}|EnglishDictionary.vcxproj|F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\head.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FEC9A3DF-6749-4751-8308-E780FF8F55F7}|EnglishDictionary.vcxproj|solutionrelative:head.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "head.h",
+              "DocumentMoniker": "F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\head.h",
+              "RelativeDocumentMoniker": "head.h",
+              "ToolTip": "F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\head.h",
+              "RelativeToolTip": "head.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-05T06:46:08.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "F:\\GitHubCode\\\u7A0B\u5E8F\u8BBE\u8BA1\u5B9E\u8BAD\\EnglishDictionary\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-07-05T06:46:10.901Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
