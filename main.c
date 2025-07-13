@@ -47,6 +47,7 @@ int main() {
         }
     }
 }
+//----------------------------------------------------------------
 
 // 用户登录和注册菜单   Powerby 潘钰楷
 int userLoginMenu() {
@@ -60,7 +61,7 @@ int userLoginMenu() {
         printf("\n\t请选择: ");
         scanf("%d", &choice);
         getchar(); // 吸收回车
-        switch (choice) {
+		switch (choice) { // 用户选择
         case 0: return 0;
         case 1: if (userLogin()) return 1; break;
         case 2: userRegister(); break;
@@ -73,10 +74,10 @@ int userLoginMenu() {
 int userLogin() {
     char username[MAX_NAME], password[MAX_PASS];
     printf("请输入用户名: ");
-    fgets(username, sizeof(username), stdin);
-    username[strcspn(username, "\n")] = 0;
+	fgets(username, sizeof(username), stdin); // 读取用户名
+	username[strcspn(username, "\n")] = 0; // 去除换行符
     printf("请输入密码: ");
-    fgets(password, sizeof(password), stdin);
+	fgets(password, sizeof(password), stdin); // 读取密码
     password[strcspn(password, "\n")] = 0;
     if (checkUser(username, password)) { // 调用checkUser函数检查用户名和密码
 		strcpy(currentUser, username); // 将当前用户设置为登录的用户名
@@ -94,15 +95,15 @@ int userLogin() {
 int userRegister() {
     char username[MAX_NAME], password[MAX_PASS];
     printf("请输入新用户名: ");
-    fgets(username, sizeof(username), stdin);
-    username[strcspn(username, "\n")] = 0;
-    if (userExists(username)) {
+	fgets(username, sizeof(username), stdin); // 读取用户名
+	username[strcspn(username, "\n")] = 0; // 去除换行符
+	if (userExists(username)) { // 调用userExists函数检查用户名是否已存在
         printf("用户名已存在！\n");
         system("pause");
         return 0;
     }
     printf("请输入新密码: ");
-    fgets(password, sizeof(password), stdin);
+	fgets(password, sizeof(password), stdin); // 读取密码
     password[strcspn(password, "\n")] = 0;
 	FILE* fp = fopen("users.txt", "a"); // 追加模式打开用户文件
     if (fp) {
@@ -122,7 +123,8 @@ int checkUser(const char* username, const char* password) {
     FILE* fp = fopen("users.txt", "r");
     char u[MAX_NAME], p[MAX_PASS];
     if (!fp) return 0;
-    while (fscanf(fp, "%s %s", u, p) == 2) {
+    while (fscanf(fp, "%s %s", u, p) == 2) { // 逐行读取用户名和密码
+		// 如果用户名和密码匹配，则返回1
 		if (strcmp(u, username) == 0 && strcmp(p, password) == 0) { // 检查用户名和密码是否匹配
             fclose(fp);
             return 1;
@@ -851,7 +853,7 @@ reload:
     // 读取单词
     count = 0;
     fp = fopen(filename, "r");
-    while (fp && fscanf(fp, "%s\t%s", words[count], meanings[count]) != EOF && count < 100) {
+	while (fp && fscanf(fp, "%s\t%s", words[count], meanings[count]) != EOF && count < 100) { // 最多100个单词
         count++;
     }
     if (fp) fclose(fp);
@@ -896,9 +898,9 @@ reload:
 
                     // 检查单词是否已存在
                     int exists = 0;
-                    for (int i = 0; i < count; i++) {
-                        if (strcmp(words[i], newWord) == 0) {
-                            exists = 1;
+					for (int i = 0; i < count; i++) { // 遍历已存在的单词
+						if (strcmp(words[i], newWord) == 0) { // 单词已存在
+							exists = 1; // 单词已存在
                             break;
                         }
                     }
@@ -910,11 +912,11 @@ reload:
 
                     fp = fopen(filename, "a");
                     if (fp != NULL) {
-                        fprintf(fp, "%s\t%s\n", newWord, newMeaning);
+						fprintf(fp, "%s\t%s\n", newWord, newMeaning); // 写入新单词和含义
                         fclose(fp);
                         printf("新单词已添加!\n");
                         system("pause");
-                        goto reload;
+						goto reload; // 重新加载单词列表
                     } else {
                         printf("无法打开收藏本文件!\n");
                         system("pause");
@@ -929,19 +931,19 @@ reload:
                     }
                     int delIdx;
                     printf("请输入要移除的单词序号: ");
-                    fgets(input, sizeof(input), stdin);
+					fgets(input, sizeof(input), stdin); // 获取用户输入
                     if (sscanf(input, "%d", &delIdx) == 1 && delIdx >= 1 && delIdx <= count) {
                         delIdx--; // 转为下标
                         // 移除单词
-                        for (int i = delIdx; i < count - 1; i++) {
-                            strcpy(words[i], words[i + 1]);
-                            strcpy(meanings[i], meanings[i + 1]);
+						for (int i = delIdx; i < count - 1; i++) { // 删除单词并重新排列
+							strcpy(words[i], words[i + 1]); // 将后面的单词前移
+							strcpy(meanings[i], meanings[i + 1]); // 将后面的单词前移
                         }
                         count--;
                         // 重新写入文件
                         fp = fopen(filename, "w");
                         for (int i = 0; i < count; i++) {
-                            fprintf(fp, "%s\t%s\n", words[i], meanings[i]);
+							fprintf(fp, "%s\t%s\n", words[i], meanings[i]); // 写入剩余单词
                         }
                         fclose(fp);
                         printf("单词已移除!\n");
@@ -957,7 +959,7 @@ reload:
                     printf("\n确定要初始化收藏本吗？此操作会清空所有收藏单词！(y/n): ");
                     fgets(input, sizeof(input), stdin);
                     if (input[0] == 'y' || input[0] == 'Y') {
-						fp = fopen(filename, "w"); // 清空文件内容
+						fp = fopen(filename, "w"); // 新建空白文本，清空文件内容
                         if (fp) fclose(fp);
                         printf("收藏本已初始化！\n");
                         system("pause");

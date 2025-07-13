@@ -1,6 +1,6 @@
 except	除了	1
 harm	伤害	1
-immediately	立即	1
+immediately	立即	2
 injure	受伤	1
 manage	管理	1
 future	未来	1
@@ -21,11 +21,11 @@ ensure	确保	1
 envelope	信封	1
 chat	聊天	1
 neglect	忽视	2
-challenge	挑战	1
+challenge	挑战	2
 enforce	执行	1
 lorry	卡车	1
 avoid	避免	1
-lower	降低	1
+lower	降低	2
 ocean	海洋	1
 accomplish	完成	1
 argue	争论	1
@@ -33,3 +33,8 @@ general	一般的	1
 comment	评论	1
 civil	公民的	1
 negotiate	谈判	1
+hurry	匆忙	1
+muscle	肌肉	1
+loss	损失	1
+inform	通知	1
+educate	教育	1

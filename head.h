@@ -20,18 +20,19 @@ typedef struct {
     int isCorrect;         // 是否为正确选项
 } Option;
 
-// 李俊超定义的错误单词结构体 
+// 定义的错误单词结构体
 typedef struct {
     char english[50];
     char chinese[200];
     int errorcount;
 } errorwords;
-// 龙海峰定义的错误单词结构体
+
+// 定义的错误单词结构体
 typedef struct {
     char english[50];
     char chinese[200];
     int errornumber;
-    int mistake2;//该变量只服务于随机数，没有实际意义
+    int mistake2;//该变量只服务于随机数
 }test;
 
 // 用户登录/注册界面   Powerby 潘钰楷 
